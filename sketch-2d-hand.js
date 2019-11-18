@@ -58,7 +58,7 @@ const sketch = () => {
     points.forEach(point => {
       const {color, rotation, position, arcStart, arcEnd} = point;
       if(!_.isEqual(point.position, [0.5, 0.5])) {
-        const char = random.pick(['👇', '👉', '👆', '👈'])
+        const char = random.pick(['👉🏿','👉🏾','👉🏽','👉🏼','👉🏻','👉', '👆','👆🏾', '👈','👇🏿','👇🏾','👇🏽','👇🏼','👇🏻','👇'])
         const [ u , v] = position;
         const margin =  width * 0.2
         const x = lerp(margin, width-margin, u);
