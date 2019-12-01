@@ -7,6 +7,9 @@ var randomEmoji = require('random-emoji');
 const settings = {
   scaleToView: true,
   dimensions: [ 2048, 2048 ],
+  duration: 3,
+  scaleToView: true,
+  playbackRate: 'throttle',
   animate: true,
   fps: 24
 };
@@ -15,7 +18,7 @@ const sketch = () => {
   const colorCount = random.rangeFloor(2, 6)
   const palette = random.shuffle(random.pick(palettes)).slice(0, colorCount)
   const background = random.pick(palettes).shift()
-  const count = 50 || random.rangeFloor(4, 60)
+  const count = 7 || random.rangeFloor(4, 60)
 
   const createGrid = () =>{
     const points = [];
@@ -52,7 +55,7 @@ const sketch = () => {
 
   // .filter(() => random.value() > 0.5)
 
-  return ({ context, width, height }) => {
+  return ({ context, width, height, frame, playhead }) => {
     // const margin =  width * 0.175
     context.fillStyle = background;
     context.fillRect(0, 0, width, height);
