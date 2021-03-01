@@ -16,6 +16,6 @@
     "lodash": "^4.17.15",
     "nice-color-palettes": "^3.0.0",
     "random-emoji": "^1.0.2",
-    "three": "^0.110.0"
+    "three": "^0.125.0"
   }
 }
